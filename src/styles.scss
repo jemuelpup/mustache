@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/scss/reset.scss';
+
+html body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 400;
+	color: #181818;
+	letter-spacing: 0.5px;
+}
+*{
+	box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	max-width: 1026px;
+	margin: 0 auto;
+}
+.mb20{
+	margin-bottom: 20px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media only screen and (max-width: 1066px) {
+	.container{
+		padding: 0 20px;
+	}
+}

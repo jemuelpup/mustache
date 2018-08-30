@@ -1,0 +1,11 @@
+<header class="header">
+	<div class="container clearfix">
+		<div class="cart">
+			<p
+			class="cart-text"
+			[class.active]="showCart"
+			(click)="showCartItems()">My Cart ( 4 )</p>
+			<app-cart class="cart-container" *ngIf="showCart"></app-cart>
+		</div>
+	</div>
+</header>

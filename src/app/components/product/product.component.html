@@ -1,0 +1,27 @@
+<div class="product">
+	<div class="container">
+
+		<div class="product-image">
+			<img src={{productImage}} alt="">
+		</div>
+		<div class="product-info">
+			<p class="product-name">{{productName}}</p>
+			<p class="price">{{price|priceFormat:"USD"}}</p>
+			<p class="product-desc">{{productDesc}}</p>
+			
+			<div class="item-data">
+				<div class="size-selection mb20">
+					<p class="size-choice-heading">Size<span class="required-star">*</span> <span class="picked-size">{{selectedSize}}</span></p>
+					<ul class="size-choice">
+						<li
+						class="size" 
+						*ngFor="let s of size; let i = index" 
+						(click)="pickSize(s.name,i)"
+						[class.active]="s.selected">{{s.name}}</li>
+					</ul>
+				</div>
+				<button class="add-to-cart" (click)="addToCart()" >Add to cart</button>
+			</div>
+		</div>
+	</div>
+</div>
